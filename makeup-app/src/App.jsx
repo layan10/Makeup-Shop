@@ -2,6 +2,7 @@ import './App.css'
 import {HomePage,ProductsPage,ProductPage,EditPage,CartPage,NotFoundPage} from './pages'
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import RootLayout from './components/Layout/Layout';
+import { UsersProvider } from "./contexts/UsersContext";
 
 function App() {
   const router = createBrowserRouter([
@@ -44,7 +45,9 @@ function App() {
 
   return (
     <div className='app'>
-      <RouterProvider router={router}/>
+      <UsersProvider>
+        <RouterProvider router={router}/>
+      </UsersProvider>
     </div>
   )
 }

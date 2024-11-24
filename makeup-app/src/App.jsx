@@ -8,7 +8,7 @@ import {ProductsProvider} from './contexts/ProductsContext';
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/Makeup-Shop/',
       element: <RootLayout />,
       children: [
         {

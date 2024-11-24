@@ -8,7 +8,7 @@ export default function NavBar() {
         localStorage.removeItem('email');
         localStorage.removeItem('password');
         localStorage.removeItem('isAdmin');
-        navigate('/');
+        navigate('/Makeup-Shop/');
 
     }
     return (

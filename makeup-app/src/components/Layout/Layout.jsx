@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar/NavBar";
 
 export default function RootLayout() {
     const location = useLocation();
-    const isHomePage = location.pathname === '/';
+    const isHomePage = location.pathname === '/Makeup-Shop/';
 
     return (
         <>  

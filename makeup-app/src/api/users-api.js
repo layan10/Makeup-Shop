@@ -2,8 +2,6 @@ import axios from "axios";
 
 import { BASE_URL, FAILED_TO_GET_USERS, FAILED_TO_GET_USER, FAILED_TO_CREATE_USER, FAILED_TO_UPDATE_USER, FAILED_TO_DELETE_USER } from "../models/constants";
 
-console.log("BASE_URL", BASE_URL);
-
 export const getUsers = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/users`);

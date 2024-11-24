@@ -10,6 +10,8 @@ export default function HomePage() {
     const { users, addUser } = useContext(UsersContext);
     const navigate = useNavigate();
     console.log("handleLoginusers", users);
+    const email = localStorage.getItem('email');
+    const password = localStorage.getItem('password');
 
     const handleLogin = ({ email, password }) => {  
         console.log("Attempting login with:", email);
@@ -44,6 +46,10 @@ export default function HomePage() {
         localStorage.setItem('password', password);
         navigate('/products');
     };
+
+    if(email && password) {
+        handleLogin({ email, password });
+    }
 
     return (
         <>  

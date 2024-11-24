@@ -1,0 +1,93 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    color: black;
+}
+
+.login-form {
+    border: 0.5rem solid #dfc2c1;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 25rem;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+img {
+    margin-top: 0;
+    width: 15rem;
+    height: 10rem;
+}
+
+.logo-container h2 {
+    font-size: 1.4rem;
+    color: #dfc2c1;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+
+}
+
+.form-group label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 0.15rem solid #dfc2c1;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    background-color: #eae4d7 ;
+    color: black;
+}
+
+
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #dfc2c1;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #edd1d0;
+}
+
+.toggle-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #dfc2c1;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    
+}
+
+.toggle-button:hover {
+    text-decoration: underline;
+}

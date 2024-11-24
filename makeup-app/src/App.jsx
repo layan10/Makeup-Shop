@@ -16,7 +16,7 @@ function App() {
           element: <HomePage />
         },
         {
-          path: 'products',
+          path: '/Makeup-Shop/products',
           children: [
             {
               index: true,

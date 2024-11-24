@@ -14,7 +14,7 @@ export default function ProductCard({ product, withInfo }) {
   const isAdmin = localStorage.getItem('isAdmin');
   return (
     <div className="product-card">
-            {!withInfo && <Link to={`/products/${product.id}`}>
+            {!withInfo && <Link to={`/Makeup-Shop/products/${product.id}`}>
                 <img src={product.image} alt={product.name} />
                 <h3>{product.name}</h3>
             </Link>
@@ -29,7 +29,7 @@ export default function ProductCard({ product, withInfo }) {
             <p> Price: <span>{product.price} $</span></p>
             <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
             {isAdmin && <div className="admin-edit">
-                <Link to={`/products/edit/${product.id}`}><button className="edit-button">Edit</button> </Link>
+                <Link to={`/Makeup-Shop/products/edit/${product.id}`}><button className="edit-button">Edit</button> </Link>
                 <button className="delete-button" onClick={handleDelete}>Delete</button>
             </div>}
   

@@ -12,7 +12,7 @@ export default function ProductsPage() {
     const navigate = useNavigate();
 
     const handleAddProuduct = () => {
-        navigate('/products/edit');
+        navigate('/Makeup-Shop/products/edit');
     }
     return (
         <>

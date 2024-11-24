@@ -28,7 +28,7 @@ export default function HomePage() {
             }
             localStorage.setItem('email', email);
             localStorage.setItem('password', password);
-            navigate('/products');
+            navigate('/Makeup-Shop/products');
         } else {
             alert(FAILED_LOGIN);
         }
@@ -44,7 +44,7 @@ export default function HomePage() {
         addUser(user); 
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
-        navigate('/products');
+        navigate('/Makeup-Shop/products');
     };
 
     if(email && password) {

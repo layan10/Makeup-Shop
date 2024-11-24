@@ -13,10 +13,10 @@ export default function NavBar() {
     }
     return (
     <ul>
-        <Link to="/products">
+        <Link to="/Makeup-Shop/products">
             <li>Products</li>
         </Link>
-        <Link to="/products/cart">
+        <Link to="/Makeup-Shop/products/cart">
             <li>Cart</li>
         </Link>
         <button className="logout-button" onClick={handleLogout}>Logout</button>

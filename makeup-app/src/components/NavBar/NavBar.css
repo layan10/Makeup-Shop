@@ -1,8 +1,9 @@
 ul {
     display: flex;
     list-style: none;
-    justify-content: space-between;
     background-color: #eae4d7;
+    justify-content: center;
+    gap: 5rem;
     padding: 0.2rem;
     border-radius: 0.1rem;
     box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
@@ -21,4 +22,16 @@ li {
 li:hover {
     box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
     border-radius: 0.4rem;
+}
+
+.logout-button {
+    width: 6rem;
+    padding: 0.75rem;
+    background-color: #dfc2c1;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+ 
 }

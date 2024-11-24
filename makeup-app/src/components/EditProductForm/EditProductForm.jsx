@@ -8,7 +8,7 @@ export default function EditProductForm() {
     const [product, setProduct] = useState({
         name: "",
         description: "",
-        price: "",
+        price: 1,
         image: ""
     });
 

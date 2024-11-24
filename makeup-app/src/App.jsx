@@ -1,8 +1,9 @@
 import './App.css'
-import {HomePage,ProductsPage,ProductPage,EditPage,CartPage,NotFoundPage} from './pages'
+import {HomePage,ProductsPage,ProductPage,EditPage,CartPage,NotFoundPage,EditProductPage} from './pages'
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import RootLayout from './components/Layout/Layout';
 import { UsersProvider } from "./contexts/UsersContext";
+import {ProductsProvider} from './contexts/ProductsContext';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,7 +28,14 @@ function App() {
             },
             {
               path: 'edit',
-              element: <EditPage />,
+              children: [{
+                index: true,
+                element: <EditPage />
+              },
+              {
+                path: ':productId',
+                element: <EditProductPage />
+              }]
             },
             {
               path: 'cart',
@@ -46,7 +54,9 @@ function App() {
   return (
     <div className='app'>
       <UsersProvider>
-        <RouterProvider router={router}/>
+        <ProductsProvider>
+          <RouterProvider router={router}/>
+        </ProductsProvider>
       </UsersProvider>
     </div>
   )

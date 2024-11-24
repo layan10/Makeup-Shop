@@ -7,16 +7,11 @@ export default function NavBar() {
         localStorage.removeItem('isAdmin');
         window.location.href = '/';
     }
-    const isAdmin = localStorage.getItem('isAdmin');
     return (
     <ul>
         <Link to="/products">
             <li>Products</li>
         </Link>
-        {isAdmin && <Link to="/products/edit">
-            <li>Edit Products</li>
-        </Link>
-    }
         <Link to="/products/cart">
             <li>Cart</li>
         </Link>

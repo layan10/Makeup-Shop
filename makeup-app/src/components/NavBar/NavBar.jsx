@@ -1,11 +1,15 @@
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 export default function NavBar() {
+    const navigate = useNavigate();
+
     const handleLogout = () => {
         localStorage.removeItem('email');
         localStorage.removeItem('password');
         localStorage.removeItem('isAdmin');
-        window.location.href = '/';
+        navigate('/');
+
     }
     return (
     <ul>

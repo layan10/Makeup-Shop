@@ -1,23 +1,26 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 export default function NavBar() {
+    const handleLogout = () => {
+        localStorage.removeItem('email');
+        localStorage.removeItem('password');
+        localStorage.removeItem('isAdmin');
+        window.location.href = '/';
+    }
+    const isAdmin = localStorage.getItem('isAdmin');
     return (
     <ul>
-        <Link to="/">
-            <li>Home</li>
-        </Link>
         <Link to="/products">
             <li>Products</li>
         </Link>
-        <Link to="/products/:productId">
-            <li>Product Info</li>
-        </Link>
-        <Link to="/products/edit">
+        {isAdmin && <Link to="/products/edit">
             <li>Edit Products</li>
         </Link>
+    }
         <Link to="/products/cart">
             <li>Cart</li>
         </Link>
+        <button className="logout-button" onClick={handleLogout}>Logout</button>
     </ul>
     
     )

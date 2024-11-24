@@ -1,14 +1,12 @@
 import "./HomePage.css";
 import logo from "../../assets/Logo.svg";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UsersContext } from "../../contexts/UsersContext";
 import { FAILED_LOGIN } from "../../models/constants";
 import LoginForm from "../../components/LoginForm/LoginForm";
 
 export default function HomePage() {
-    const [isAdmin, setIsAdmin] = useState(false);
-    const [error, setError] = useState(false);
     const { users, addUser } = useContext(UsersContext);
     const navigate = useNavigate();
     console.log("handleLoginusers", users);
@@ -24,14 +22,12 @@ export default function HomePage() {
 
         if(user) {
             if(user.permission === 'A') {
-                setIsAdmin(true);
                 localStorage.setItem('isAdmin', 'true');
             }
             localStorage.setItem('email', email);
             localStorage.setItem('password', password);
             navigate('/products');
         } else {
-            setError(true);
             alert(FAILED_LOGIN);
         }
     }

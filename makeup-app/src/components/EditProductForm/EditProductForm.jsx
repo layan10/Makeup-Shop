@@ -5,24 +5,15 @@ import { ProductsContext } from "../../contexts/ProductsContext";
 export default function EditProductForm() {
 
     const {addProduct } = useContext(ProductsContext);
-    const [product, setProduct] = useState({
-        name: "",
-        description: "",
-        price: 1,
-        image: ""
-    });
-
-    const handleChange = (e) => {
-        setProduct({
-            ...product,
-            [e.target.name]: e.target.value
-        });
-    }
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+    const [price, setPrice] = useState(1);
+    const [image, setImage] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Product:", product);
-        addProduct(product);
+        console.log("Product:", name, description, price, image);
+        addProduct({name, description, price, image});
         alert("Product added successfully");
     }
 
@@ -35,8 +26,9 @@ export default function EditProductForm() {
                     <input
                         type="text"
                         id="name"
-                        value={product.name}
-                        onChange={handleChange}
+                        name="name"
+                        value={name}
+                        onChange = {(e) => setName(e.target.value)}
                     />
                 </div>
                 <div className="edit-form-group">
@@ -44,8 +36,9 @@ export default function EditProductForm() {
                     <input
                         type="text"
                         id="description"
-                        value={product.description}
-                        onChange={handleChange}
+                        name="description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
                     />
                 </div>
 
@@ -55,9 +48,10 @@ export default function EditProductForm() {
                     <input
                         type="number"
                         id="price"
-                        min={0}
-                        value={product.price}
-                        onChange={handleChange}
+                        name="price"
+                        min={1}
+                        value={price}
+                        onChange={(e) => setPrice(e.target.value)}
                     />
                 </div>
 
@@ -66,8 +60,9 @@ export default function EditProductForm() {
                     <input
                         type="text"
                         id="image"
-                        value={product.image}
-                        onChange={handleChange}
+                        name="image"
+                        value={image}
+                        onChange={(e) => setImage(e.target.value)}
                     />
                 </div>
             
